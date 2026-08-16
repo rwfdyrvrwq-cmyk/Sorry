@@ -1,0 +1,810 @@
+<title>He Forgives Me Not</title>
+<style>
+  /* ── tokens: light (pressed-flower journal) ─────────────────── */
+  :root {
+    --paper:       #FCF4F2;
+    --desk:        #F2E3E4;
+    --rule:        #EBD3DC;
+    --margin-rule: #E9A8BC;
+    --ink:         #6B4A5C;
+    --ink-soft:    #9B7C8C;
+    --ink-faint:   #BFA3B0;
+    --accent:      #E0729A;
+    --accent-deep: #C4527F;
+    --accent-soft: #F6CBDB;
+    --petal-a:     #F9CBDC;
+    --petal-b:     #F2A2C0;
+    --petal-c:     #E87BA5;
+    --heart:       #FDD9A0;
+    --leaf:        #A9BE9E;
+    --shadow:      rgba(150, 100, 120, .18);
+    --focus:       #C4527F;
+    --noise-op:    .045;
+  }
+
+  /* Deliberately single-theme: this page is always the pink journal,
+     whatever theme her phone is set to. Every color is painted
+     explicitly above so it never borrows the host background. */
+
+  :root {
+    --lh: 34px;
+    --pad-top: 68px;
+    --margin-x: 74px;
+    --rule-x: 50px;
+    --hand: "Snell Roundhand", "Bradley Hand", "Segoe Script",
+            "Brush Script MT", cursive;
+    --soft: ui-rounded, "SF Pro Rounded", "Hiragino Maru Gothic ProN",
+            "Varela Round", "Nunito", "Quicksand", system-ui,
+            -apple-system, "Segoe UI", sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--desk);
+    color: var(--ink);
+    font-family: var(--soft);
+    font-size: 17.5px;
+    line-height: var(--lh);
+    letter-spacing: .002em;
+    -webkit-font-smoothing: antialiased;
+    padding: clamp(0px, 4vw, 56px) clamp(0px, 4vw, 40px);
+  }
+
+  /* ── the sheet ──────────────────────────────────────────────── */
+  .sheet {
+    position: relative;
+    width: 100%;
+    max-width: 660px;
+    margin: 0 auto;
+    background-color: var(--paper);
+    background-image:
+      repeating-linear-gradient(
+        to bottom,
+        transparent 0 calc(var(--lh) - 1px),
+        var(--rule) calc(var(--lh) - 1px) var(--lh)
+      );
+    background-position: 0 calc(var(--pad-top) + 9px);
+    border-radius: 18px;
+    box-shadow:
+      0 2px 3px var(--shadow),
+      0 18px 44px -10px var(--shadow);
+    padding: var(--pad-top) clamp(24px, 6vw, 56px) calc(var(--lh) * 2) var(--margin-x);
+    overflow: hidden;
+    animation: settle .75s cubic-bezier(.2, .7, .3, 1) both;
+  }
+
+  .sheet::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: var(--noise-op);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .sheet::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: var(--rule-x);
+    width: 1px;
+    background: var(--margin-rule);
+    opacity: .8;
+  }
+
+  @keyframes settle {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: none; }
+  }
+
+  /* pressed flowers tucked into the page, each breathing on its own clock */
+  .pressed {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+    --rot: 0deg;
+    --lift: 3px;
+    transform: rotate(var(--rot));
+    transform-origin: 50% 90%;
+    animation: sway var(--dur, 9s) ease-in-out var(--delay, 0s) infinite;
+  }
+
+  @keyframes sway {
+    0%, 100% { transform: rotate(var(--rot)) translateY(0); }
+    50%      { transform: rotate(calc(var(--rot) + 3.5deg)) translateY(calc(var(--lift) * -1)); }
+  }
+
+  .pressed.p1 { top: 10px;      right: 20px;  width: 78px; --rot:  16deg; opacity: .50; --dur: 9s;    --delay: 0s; }
+  .pressed.p2 { top: 128px;     left: 2px;    width: 40px; --rot: -18deg; opacity: .42; --dur: 11s;   --delay: -2s; }
+  .pressed.p3 { top: 40%;       right: -16px; width: 60px; --rot:  -9deg; opacity: .30; --dur: 12.5s; --delay: -5s; }
+  .pressed.p4 { top: 330px;     left: -6px;   width: 36px; --rot:  12deg; opacity: .38; --dur: 10s;   --delay: -1s; }
+  .pressed.p5 { bottom: 172px;  left: 0px;    width: 46px; --rot: -24deg; opacity: .40; --dur: 13s;   --delay: -7s; }
+  .pressed.p6 { bottom: 14px;   right: 24px;  width: 68px; --rot:   8deg; opacity: .46; --dur: 9.5s;  --delay: -3s; }
+  .pressed.p7 { top: 66%;       left: -4px;   width: 38px; --rot:  20deg; opacity: .34; --dur: 11.5s; --delay: -6s; }
+  .pressed.p8 { bottom: 42%;    right: -14px; width: 44px; --rot: -14deg; opacity: .28; --dur: 14s;   --delay: -4s; }
+
+  .sheet > *:not(.pressed) { position: relative; z-index: 1; }
+
+  /* ── type ───────────────────────────────────────────────────── */
+  .eyebrow {
+    font-family: var(--hand);
+    font-size: 23px;
+    line-height: var(--lh);
+    color: var(--accent);
+    margin: 0 0 var(--lh);
+    transform: rotate(-1.5deg);
+    transform-origin: left center;
+  }
+
+  h1 {
+    font-weight: 600;
+    font-size: 41px;
+    line-height: calc(var(--lh) * 1.5);
+    margin: 0 0 var(--lh);
+    letter-spacing: -.02em;
+    text-wrap: balance;
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: 27px;
+    line-height: calc(var(--lh) * 1.5);
+    margin: calc(var(--lh) * 1.5) 0 0;
+    letter-spacing: -.01em;
+    text-wrap: balance;
+  }
+
+  p { margin: 0 0 var(--lh); max-width: 33em; }
+
+  .lede { color: var(--ink-soft); }
+
+  .blank {
+    color: var(--accent-deep);
+    font-weight: 600;
+    background: linear-gradient(to top, var(--accent-soft) 0 3px, transparent 3px);
+    padding: 0 .2em;
+    border-radius: 2px;
+  }
+
+  .strike { text-decoration: line-through; color: var(--ink-faint); }
+
+  strong { font-weight: 600; }
+
+  /* ── divider: a little row of buds ──────────────────────────── */
+  .divider {
+    margin: var(--lh) 0;
+    height: var(--lh);
+    display: flex;
+    align-items: center;
+    gap: 9px;
+  }
+  .divider span {
+    width: 6px; height: 6px;
+    flex: none;
+    border-radius: 60% 40% 55% 45% / 50% 55% 45% 50%;
+    background: var(--accent-soft);
+  }
+  .divider span:nth-of-type(2) { background: var(--petal-b); }
+
+  .divider svg {
+    width: 18px; height: 18px;
+    flex: none;
+    animation: bob 6s ease-in-out infinite;
+  }
+  .divider svg:nth-of-type(2) { width: 22px; height: 22px; animation-delay: -2s; }
+  .divider svg:nth-of-type(3) { animation-delay: -4s; }
+
+  @keyframes bob {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50%      { transform: translateY(-2.5px) rotate(9deg); }
+  }
+
+  /* ── the daisy ──────────────────────────────────────────────── */
+  .ask { margin-top: calc(var(--lh) * 1.5); }
+
+  .daisy-wrap {
+    display: flex;
+    justify-content: center;
+    margin: calc(var(--lh) * .5) 0 calc(var(--lh) * .25);
+  }
+  .daisy { width: 148px; height: 148px; overflow: visible; }
+
+  .petal-slot { transform-box: fill-box; transform-origin: 50% 100%; }
+
+  .petal {
+    transition: transform .9s cubic-bezier(.3,.1,.5,1), opacity .9s ease;
+    transform-box: fill-box;
+    transform-origin: 50% 100%;
+  }
+  .petal-slot.gone .petal {
+    transform: translateY(-96px) rotate(38deg) scale(.85);
+    opacity: 0;
+  }
+  .daisy.bloom .petal-slot .petal {
+    transform: none;
+    opacity: 1;
+  }
+  .daisy.bloom { animation: bloom .8s cubic-bezier(.3,1.4,.5,1) both; }
+  @keyframes bloom {
+    0%   { transform: scale(.86) rotate(-6deg); }
+    100% { transform: scale(1) rotate(0); }
+  }
+
+  .count {
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin: 0 0 calc(var(--lh) * .5);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .pick-one {
+    font-size: 12px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    line-height: var(--lh);
+    margin: 0;
+    text-align: center;
+  }
+
+  /* ── buttons ────────────────────────────────────────────────── */
+  .playfield {
+    position: relative;
+    min-height: calc(var(--lh) * 4);
+    margin-top: calc(var(--lh) * .25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .choice {
+    font-family: var(--soft);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1;
+    color: var(--ink);
+    background: var(--paper);
+    border: 2px solid var(--accent-soft);
+    border-radius: 999px;
+    padding: 16px 34px;
+    cursor: pointer;
+    box-shadow: 0 3px 0 var(--accent-soft);
+    transition: transform .2s cubic-bezier(.3,1.5,.5,1),
+                box-shadow .2s, border-color .2s, background .2s;
+  }
+  .choice:active { transform: translateY(2px); box-shadow: 0 1px 0 var(--accent-soft); }
+  .choice:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+
+  .choice-yes {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+    box-shadow: 0 3px 0 var(--accent-deep);
+  }
+  .choice-yes:hover { transform: scale(1.06) rotate(-1.5deg); }
+
+  .choice-no:hover { border-color: var(--accent); }
+  .choice-no.loose { position: absolute; margin: 0; transition: none; }
+
+  .taunt {
+    font-family: var(--hand);
+    font-size: 21px;
+    line-height: 1.4;
+    color: var(--accent-deep);
+    min-height: calc(var(--lh) * 1.5);
+    margin: calc(var(--lh) * .25) 0 0;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .25s;
+  }
+  .taunt.show { opacity: 1; }
+
+  /* ── reveal ─────────────────────────────────────────────────── */
+  .reveal {
+    display: none;
+    margin-top: var(--lh);
+    animation: settle .6s cubic-bezier(.2,.7,.3,1) both;
+  }
+  .reveal.open { display: block; }
+
+  .signature {
+    font-family: var(--hand);
+    font-size: 31px;
+    line-height: calc(var(--lh) * 1.5);
+    color: var(--ink);
+    margin: var(--lh) 0 0;
+    transform: rotate(-2deg);
+    transform-origin: left center;
+  }
+
+  .softno {
+    display: none;
+    margin-top: var(--lh);
+    padding-left: 18px;
+    border-left: 3px solid var(--accent-soft);
+    border-radius: 2px;
+  }
+  .softno.open { display: block; }
+
+  .again {
+    font-family: var(--soft);
+    font-size: 16px;
+    color: var(--ink-soft);
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--accent-soft);
+    padding: 2px 0;
+    cursor: pointer;
+  }
+  .again:hover { color: var(--accent-deep); border-bottom-color: var(--accent); }
+  .again:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+
+  /* petals drifting down the whole page, always */
+  canvas.ambient {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+    opacity: .5;
+  }
+
+  canvas.confetti {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  @media (max-width: 560px) {
+    :root { --margin-x: 50px; --rule-x: 30px; }
+    body { padding: 0; font-size: 17px; }
+    .sheet { min-height: 100vh; border-radius: 0; box-shadow: none; }
+    h1 { font-size: 34px; }
+    h2 { font-size: 24px; }
+    .daisy { width: 128px; height: 128px; }
+    /* thin the scatter so a phone screen doesn't get crowded */
+    .pressed.p1 { width: 56px; }
+    .pressed.p6 { width: 48px; }
+    .pressed.p2, .pressed.p5 { width: 32px; }
+    .pressed.p4, .pressed.p7 { width: 28px; }
+    .pressed.p3, .pressed.p8 { display: none; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, .petal { animation-duration: .001s !important; transition-duration: .001s !important; }
+    .pressed, .divider svg { animation: none !important; }
+    canvas.ambient { display: none; }
+  }
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="bloom" viewBox="0 0 100 100">
+    <g>
+      <ellipse cx="50" cy="26" rx="12" ry="19" fill="var(--petal-a)"/>
+      <ellipse cx="74" cy="50" rx="19" ry="12" fill="var(--petal-b)"/>
+      <ellipse cx="50" cy="74" rx="12" ry="19" fill="var(--petal-a)"/>
+      <ellipse cx="26" cy="50" rx="19" ry="12" fill="var(--petal-b)"/>
+      <ellipse cx="67" cy="33" rx="16" ry="10" transform="rotate(-45 67 33)" fill="var(--petal-c)"/>
+      <ellipse cx="33" cy="33" rx="10" ry="16" transform="rotate(-45 33 33)" fill="var(--petal-c)"/>
+      <ellipse cx="67" cy="67" rx="10" ry="16" transform="rotate(-45 67 67)" fill="var(--petal-c)"/>
+      <ellipse cx="33" cy="67" rx="16" ry="10" transform="rotate(-45 33 67)" fill="var(--petal-c)"/>
+      <circle cx="50" cy="50" r="11" fill="var(--heart)"/>
+    </g>
+  </symbol>
+
+  <symbol id="blossom" viewBox="0 0 100 100">
+    <g fill="var(--petal-b)">
+      <ellipse cx="50" cy="30" rx="13" ry="19"/>
+      <ellipse cx="50" cy="30" rx="13" ry="19" transform="rotate(72 50 50)"/>
+      <ellipse cx="50" cy="30" rx="13" ry="19" transform="rotate(144 50 50)"/>
+      <ellipse cx="50" cy="30" rx="13" ry="19" transform="rotate(216 50 50)"/>
+      <ellipse cx="50" cy="30" rx="13" ry="19" transform="rotate(288 50 50)"/>
+    </g>
+    <circle cx="50" cy="50" r="9" fill="var(--heart)"/>
+  </symbol>
+
+  <symbol id="bud" viewBox="0 0 100 100">
+    <path d="M50 97 C50 80 50 66 50 54" stroke="var(--leaf)" stroke-width="4"
+          fill="none" stroke-linecap="round"/>
+    <path d="M50 80 C38 76 31 66 33 57 C43 57 50 68 50 80Z" fill="var(--leaf)"/>
+    <path d="M50 70 C62 66 69 56 67 47 C57 47 50 58 50 70Z" fill="var(--leaf)"/>
+    <ellipse cx="50" cy="34" rx="17" ry="22" fill="var(--petal-b)"/>
+    <path d="M50 13 C39 23 39 45 50 58 C61 45 61 23 50 13Z" fill="var(--petal-c)"/>
+  </symbol>
+
+  <symbol id="sprig" viewBox="0 0 100 100">
+    <path d="M50 97 C47 78 53 62 50 42" stroke="var(--leaf)" stroke-width="3.5"
+          fill="none" stroke-linecap="round"/>
+    <path d="M49 78 C39 74 33 66 35 59 C44 59 50 69 49 78Z" fill="var(--leaf)"/>
+    <path d="M51 64 C61 60 67 52 65 45 C56 45 50 55 51 64Z" fill="var(--leaf)"/>
+    <circle cx="50" cy="32" r="11" fill="var(--petal-c)"/>
+    <circle cx="33" cy="45" r="8"  fill="var(--petal-a)"/>
+    <circle cx="67" cy="43" r="8"  fill="var(--petal-b)"/>
+    <circle cx="50" cy="32" r="4"  fill="var(--heart)"/>
+  </symbol>
+</svg>
+
+<div class="sheet">
+  <svg class="pressed p1" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p2" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p3" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p4" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p5" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p6" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p7" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p8" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+
+  <p class="eyebrow">for Lyn</p>
+
+  <h1>I'm sorry.</h1>
+
+  <p class="lede">I'm not just saying this so things can go back to normal. I actually sat down and thought about it.</p>
+
+  <p>I'm sorry for everything.</p>
+
+  <p>I keep thinking about how all of this made you feel, not how it made me feel. I know I made you angry, and disappointed too. I hate that I'm the reason for that. You weren't overreacting, and you had every right to be mad at me.</p>
+
+  <p>I'm not going to sit here and make excuses either. There's no “but” coming after this one. I messed up, and that's on me.</p>
+
+  <p>So here's what I'm going to do. I'm going to change, completely, for the better. And I don't mean that as a thing I say just to end the argument. I mean I'm actually doing it.</p>
+
+  <p>I'd rather admit I was wrong than lose you because I was too stubborn to say it.</p>
+
+  <div class="divider" aria-hidden="true">
+    <span></span>
+    <svg viewBox="0 0 100 100"><use href="#blossom"/></svg>
+    <span></span>
+    <svg viewBox="0 0 100 100"><use href="#bloom"/></svg>
+    <span></span>
+    <svg viewBox="0 0 100 100"><use href="#blossom"/></svg>
+    <span></span>
+  </div>
+
+  <div class="ask">
+    <h2>I'm sorry, will you still forgive me?</h2>
+
+    <div class="daisy-wrap">
+      <svg class="daisy" id="daisy" viewBox="0 0 200 200" role="img"
+           aria-label="A pink daisy that loses a petal each time the No button runs away">
+        <g id="petals">
+          <g class="petal-slot" transform="rotate(0 100 100)"><path class="petal" d="M100 96C86 84 84 56 100 40C116 56 114 84 100 96Z" fill="var(--petal-a)"/></g>
+          <g class="petal-slot" transform="rotate(45 100 100)"><path class="petal" d="M100 96C86 84 84 56 100 40C116 56 114 84 100 96Z" fill="var(--petal-b)"/></g>
+          <g class="petal-slot" transform="rotate(90 100 100)"><path class="petal" d="M100 96C86 84 84 56 100 40C116 56 114 84 100 96Z" fill="var(--petal-a)"/></g>
+          <g class="petal-slot" transform="rotate(135 100 100)"><path class="petal" d="M100 96C86 84 84 56 100 40C116 56 114 84 100 96Z" fill="var(--petal-b)"/></g>
+          <g class="petal-slot" transform="rotate(180 100 100)"><path class="petal" d="M100 96C86 84 84 56 100 40C116 56 114 84 100 96Z" fill="var(--petal-a)"/></g>
+          <g class="petal-slot" transform="rotate(225 100 100)"><path class="petal" d="M100 96C86 84 84 56 100 40C116 56 114 84 100 96Z" fill="var(--petal-b)"/></g>
+          <g class="petal-slot" transform="rotate(270 100 100)"><path class="petal" d="M100 96C86 84 84 56 100 40C116 56 114 84 100 96Z" fill="var(--petal-a)"/></g>
+          <g class="petal-slot" transform="rotate(315 100 100)"><path class="petal" d="M100 96C86 84 84 56 100 40C116 56 114 84 100 96Z" fill="var(--petal-b)"/></g>
+        </g>
+        <circle cx="100" cy="100" r="19" fill="var(--heart)"/>
+        <circle cx="100" cy="100" r="19" fill="none" stroke="var(--accent-soft)" stroke-width="2"/>
+      </svg>
+    </div>
+
+    <p class="count" id="count">8 petals left</p>
+    <p class="pick-one">Pick one</p>
+
+    <div class="playfield" id="playfield">
+      <button class="choice choice-yes" id="yes" type="button">Yes</button>
+      <button class="choice choice-no" id="no" type="button">No</button>
+    </div>
+
+    <p class="taunt" id="taunt" aria-live="polite"></p>
+  </div>
+
+  <div class="reveal" id="reveal">
+    <div class="divider" aria-hidden="true">
+      <span></span>
+      <svg viewBox="0 0 100 100"><use href="#blossom"/></svg>
+      <span></span>
+      <svg viewBox="0 0 100 100"><use href="#bloom"/></svg>
+      <span></span>
+      <svg viewBox="0 0 100 100"><use href="#blossom"/></svg>
+      <span></span>
+    </div>
+    <h2>Thank you.</h2>
+    <p>I know a website doesn't fix anything. I just couldn't think of a better way to get you to hear me out all the way through.</p>
+    <p>I'll start by being there. Consistently, every day, and not just when something's wrong.</p>
+    <p class="signature">love, Gboi</p>
+  </div>
+
+  <div class="softno" id="softno">
+    <p>Okay. That's fair, and I'm not going to make a joke out of it.</p>
+    <p>I meant the part above. Take whatever time you need, I'll be here when you're ready.</p>
+    <button class="again" id="again" type="button">let me read it again</button>
+  </div>
+</div>
+
+<canvas class="ambient" id="ambient" aria-hidden="true"></canvas>
+<canvas class="confetti" id="confetti" aria-hidden="true"></canvas>
+
+<script>
+/* ── ambient: petals drifting down the page, always running ───── */
+(function () {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  var c = document.getElementById('ambient');
+  var x = c.getContext('2d');
+  var W, H, dpr;
+
+  function size() {
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    W = innerWidth; H = innerHeight;
+    c.width = W * dpr; c.height = H * dpr;
+    x.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  addEventListener('resize', size);
+  size();
+
+  function tok(n) {
+    return getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+  }
+  var palette = [tok('--petal-a'), tok('--petal-b'), tok('--petal-c'), tok('--accent-soft')];
+
+  /* seeded = already on screen at load, so it isn't empty for the first few seconds */
+  function make(seeded) {
+    return {
+      x: Math.random() * W,
+      y: seeded ? Math.random() * H : -24,
+      r: 3.5 + Math.random() * 4,
+      vy: 0.25 + Math.random() * 0.5,
+      vx: -0.25 + Math.random() * 0.5,
+      rot: Math.random() * Math.PI * 2,
+      vr: (Math.random() - .5) * 0.02,
+      sway: Math.random() * Math.PI * 2,
+      amp: 0.4 + Math.random() * 0.9,
+      col: palette[(Math.random() * palette.length) | 0],
+      a: 0.35 + Math.random() * 0.45
+    };
+  }
+
+  var petals = [];
+  var N = innerWidth < 560 ? 12 : 20;
+  for (var i = 0; i < N; i++) petals.push(make(true));
+
+  function frame() {
+    x.clearRect(0, 0, W, H);
+    for (var i = 0; i < petals.length; i++) {
+      var p = petals[i];
+      p.sway += 0.012;
+      p.y += p.vy;
+      p.x += p.vx + Math.sin(p.sway) * p.amp;
+      p.rot += p.vr;
+      if (p.y > H + 30 || p.x < -50 || p.x > W + 50) { petals[i] = make(false); continue; }
+
+      x.save();
+      x.translate(p.x, p.y);
+      x.rotate(p.rot);
+      x.globalAlpha = p.a;
+      x.fillStyle = p.col;
+      x.beginPath();
+      x.ellipse(0, 0, p.r, p.r * 1.75, 0, 0, Math.PI * 2);
+      x.fill();
+      x.restore();
+    }
+    x.globalAlpha = 1;
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+(function () {
+  var noBtn   = document.getElementById('no');
+  var yesBtn  = document.getElementById('yes');
+  var field   = document.getElementById('playfield');
+  var taunt   = document.getElementById('taunt');
+  var count   = document.getElementById('count');
+  var daisy   = document.getElementById('daisy');
+  var reveal  = document.getElementById('reveal');
+  var softno  = document.getElementById('softno');
+  var again   = document.getElementById('again');
+  var slots   = Array.prototype.slice.call(daisy.querySelectorAll('.petal-slot'));
+  var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var lines = [
+    'nope hahaha',
+    'are you sure?',
+    'ok that’s fair',
+    'nice try though',
+    'I will cry',
+    'ooh, look how much bigger that other button is',
+    'I deserved that one',
+    'there goes the last petal',
+    'ok that’s a bit unfair of me',
+    'say yes or else…',
+    'I’m gonna cry (kidding)',
+    'the button’s on my side, not me',
+    'pookie please',
+    'I’ll wait as long as you want'
+  ];
+  var bare = 'ok I’m out of petals and out of tricks… please?';
+  var dodges = 0;
+
+  function lockField() {
+    if (field.dataset.locked) return;
+    field.style.minHeight = Math.max(field.offsetHeight, 140) + 'px';
+    field.dataset.locked = '1';
+  }
+
+  function pluck() {
+    for (var i = 0; i < slots.length; i++) {
+      if (!slots[i].classList.contains('gone')) {
+        slots[i].classList.add('gone');
+        break;
+      }
+    }
+    var left = slots.filter(function (s) { return !s.classList.contains('gone'); }).length;
+    count.textContent = left === 0
+      ? 'no petals left'
+      : left + (left === 1 ? ' petal left' : ' petals left');
+    return left;
+  }
+
+  function dodge() {
+    lockField();
+
+    if (!noBtn.classList.contains('loose')) noBtn.classList.add('loose');
+
+    var fw = field.clientWidth, fh = field.clientHeight;
+    var bw = noBtn.offsetWidth,  bh = noBtn.offsetHeight;
+    var maxX = Math.max(0, fw - bw), maxY = Math.max(0, fh - bh);
+    var curX = parseFloat(noBtn.style.left) || 0;
+    var curY = parseFloat(noBtn.style.top)  || 0;
+
+    var x, y, tries = 0;
+    do {
+      x = Math.random() * maxX;
+      y = Math.random() * maxY;
+      tries++;
+    } while (tries < 24 && Math.hypot(x - curX, y - curY) < Math.min(maxX, 150));
+
+    noBtn.style.left = x + 'px';
+    noBtn.style.top  = y + 'px';
+    if (!reduced) {
+      noBtn.style.transform = 'rotate(' + (Math.random() * 16 - 8).toFixed(1) + 'deg)';
+    }
+
+    pluck();
+    taunt.textContent = dodges < lines.length ? lines[dodges] : bare;
+    taunt.classList.add('show');
+    dodges++;
+
+    yesBtn.style.transform = 'scale(' + Math.min(1 + dodges * 0.05, 1.32) + ')';
+  }
+
+  noBtn.addEventListener('mouseenter', dodge);
+  noBtn.addEventListener('mousemove', function () { if (dodges === 0) dodge(); });
+  noBtn.addEventListener('touchstart', function (e) { e.preventDefault(); dodge(); }, { passive: false });
+
+  /* if she genuinely lands it, never punish, answer honestly instead */
+  noBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    if (dodges < 3) { dodge(); return; }
+    softno.classList.add('open');
+    reveal.classList.remove('open');
+    softno.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'center' });
+  });
+
+  again.addEventListener('click', function () {
+    softno.classList.remove('open');
+    window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' });
+  });
+
+  yesBtn.addEventListener('click', function () {
+    softno.classList.remove('open');
+    reveal.classList.add('open');
+    noBtn.style.display = 'none';
+    taunt.classList.remove('show');
+
+    /* every petal grows back */
+    slots.forEach(function (s) { s.classList.remove('gone'); });
+    count.textContent = 'all of them, back';
+    daisy.classList.remove('bloom');
+    void daisy.offsetWidth;
+    daisy.classList.add('bloom');
+
+    burst();
+    setTimeout(function () {
+      reveal.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
+    }, 120);
+  });
+
+  /* ── petal confetti ─────────────────────────────────────────── */
+  var canvas = document.getElementById('confetti');
+  var ctx = canvas.getContext('2d');
+  var bits = [], raf = null;
+
+  function sizeCanvas() {
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width  = innerWidth * dpr;
+    canvas.height = innerHeight * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  addEventListener('resize', sizeCanvas);
+  sizeCanvas();
+
+  function token(n) {
+    return getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+  }
+
+  function burst() {
+    var palette = [token('--petal-a'), token('--petal-b'), token('--petal-c'),
+                   token('--accent'), token('--heart')];
+    var n = reduced ? 24 : 120;
+    var r = yesBtn.getBoundingClientRect();
+    var ox = r.left + r.width / 2, oy = r.top + r.height / 2;
+
+    for (var i = 0; i < n; i++) {
+      var a = Math.random() * Math.PI * 2;
+      var s = 3 + Math.random() * 8;
+      bits.push({
+        x: ox, y: oy,
+        vx: Math.cos(a) * s,
+        vy: Math.sin(a) * s - 5,
+        r: 4 + Math.random() * 5,
+        rot: Math.random() * Math.PI,
+        vr: (Math.random() - .5) * .22,
+        sway: Math.random() * Math.PI * 2,
+        col: palette[(Math.random() * palette.length) | 0],
+        life: 1
+      });
+    }
+    if (!raf) raf = requestAnimationFrame(tick);
+  }
+
+  function petal(x, y, r, rot, col) {
+    ctx.save();
+    ctx.translate(x, y);
+    ctx.rotate(rot);
+    ctx.fillStyle = col;
+    ctx.beginPath();
+    ctx.ellipse(0, 0, r, r * 1.7, 0, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.restore();
+  }
+
+  function tick() {
+    ctx.clearRect(0, 0, innerWidth, innerHeight);
+    var alive = 0;
+
+    for (var i = 0; i < bits.length; i++) {
+      var b = bits[i];
+      if (b.life <= 0) continue;
+
+      b.vy += 0.19;              /* petals fall slower than paper */
+      b.vx *= 0.988;
+      b.sway += 0.07;
+      b.x += b.vx + Math.sin(b.sway) * 0.9;
+      b.y += b.vy;
+      b.rot += b.vr;
+      if (b.y > innerHeight + 40) { b.life = 0; continue; }
+      b.life -= 0.0032;
+      alive++;
+
+      ctx.globalAlpha = Math.max(0, Math.min(1, b.life));
+      petal(b.x, b.y, b.r, b.rot, b.col);
+    }
+    ctx.globalAlpha = 1;
+
+    if (alive > 0) {
+      raf = requestAnimationFrame(tick);
+    } else {
+      bits.length = 0;
+      ctx.clearRect(0, 0, innerWidth, innerHeight);
+      raf = null;
+    }
+  }
+})();
+</script>

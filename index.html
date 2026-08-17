@@ -1,4 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Read This Please</title>
+<meta name="theme-color" content="#FCF4F2">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='%23F2A2C0'%3E%3Cellipse cx='50' cy='26' rx='16' ry='23'/%3E%3Cellipse cx='50' cy='26' rx='16' ry='23' transform='rotate(72 50 50)'/%3E%3Cellipse cx='50' cy='26' rx='16' ry='23' transform='rotate(144 50 50)'/%3E%3Cellipse cx='50' cy='26' rx='16' ry='23' transform='rotate(216 50 50)'/%3E%3Cellipse cx='50' cy='26' rx='16' ry='23' transform='rotate(288 50 50)'/%3E%3C/g%3E%3Ccircle cx='50' cy='50' r='12' fill='%23FDD9A0'/%3E%3C/svg%3E">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rwfdyrvrwq-cmyk.github.io/Imsori/">
+<meta property="og:title" content="Read This Please">
+<meta property="og:description" content="I wrote you something.">
+<meta property="og:image" content="https://rwfdyrvrwq-cmyk.github.io/Imsori/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Pink flowers on notebook paper">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Read This Please">
+<meta name="twitter:description" content="I wrote you something.">
+<meta name="twitter:image" content="https://rwfdyrvrwq-cmyk.github.io/Imsori/og-card.png">
+
 <style>
   /* ── tokens: light (pressed-flower journal) ─────────────────── */
   :root {
@@ -227,6 +249,19 @@
     transform: none;
     opacity: 1;
   }
+  /* once every petal is gone, the whole flower gives up a little */
+  .daisy.bare { animation: droop 1s cubic-bezier(.3,.8,.4,1) both; }
+  @keyframes droop {
+    to { transform: rotate(-7deg) translateY(7px) scale(.93); }
+  }
+
+  /* and the yes button starts quietly asking for attention */
+  .choice-yes.calling { animation: pulse 1.8s ease-in-out infinite; }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 3px 0 var(--accent-deep), 0 0 0 0   rgba(224,114,154,.5); }
+    50%      { box-shadow: 0 3px 0 var(--accent-deep), 0 0 0 16px rgba(224,114,154,0); }
+  }
+
   .daisy.bloom { animation: bloom .8s cubic-bezier(.3,1.4,.5,1) both; }
   @keyframes bloom {
     0%   { transform: scale(.86) rotate(-6deg); }
@@ -388,6 +423,8 @@
     canvas.ambient { display: none; }
   }
 </style>
+</head>
+<body>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="bloom" viewBox="0 0 100 100">
@@ -649,6 +686,10 @@
     count.textContent = left === 0
       ? 'no petals left'
       : left + (left === 1 ? ' petal left' : ' petals left');
+    if (left === 0) {
+      daisy.classList.add('bare');
+      yesBtn.classList.add('calling');
+    }
     return left;
   }
 
@@ -711,6 +752,8 @@
     /* every petal grows back */
     slots.forEach(function (s) { s.classList.remove('gone'); });
     count.textContent = 'all of them, back';
+    daisy.classList.remove('bare');
+    yesBtn.classList.remove('calling');
     daisy.classList.remove('bloom');
     void daisy.offsetWidth;
     daisy.classList.add('bloom');
@@ -808,3 +851,5 @@
   }
 })();
 </script>
+</body>
+</html>

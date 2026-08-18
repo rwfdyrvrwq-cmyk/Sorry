@@ -74,6 +74,14 @@
     padding: clamp(0px, 4vw, 56px) clamp(0px, 4vw, 40px);
   }
 
+  .sheet-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 660px;
+    margin: 0 auto;
+  }
+  .sheet-wrap .sheet { margin: 0; }
+
   /* ── the sheet ──────────────────────────────────────────────── */
   .sheet {
     position: relative;
@@ -153,8 +161,129 @@
   .pressed.p12 { top: 52%;     left: -8px;   width: 34px; --rot: -19deg; opacity: .34; --dur: 11s;   --delay: -4.5s; }
   .pressed.p13 { top: 78%;     right: -14px; width: 46px; --rot:   6deg; opacity: .30; --dur: 14.5s; --delay: -6.5s; }
   .pressed.p14 { top: 88%;     left: -6px;   width: 34px; --rot: -25deg; opacity: .38; --dur: 9.8s;  --delay: -1.5s; }
+  .pressed.p15 { top: 6%;      left: 4px;    width: 26px; --rot:  30deg; opacity: .34; --dur: 10.2s; --delay: -3.5s; }
+  .pressed.p16 { top: 20%;     right: 4px;   width: 26px; --rot: -28deg; opacity: .26; --dur: 12.8s; --delay: -7.5s; }
+  .pressed.p17 { top: 30%;     left: -12px;  width: 44px; --rot:  -6deg; opacity: .30; --dur: 15s;   --delay: -5.5s; }
+  .pressed.p18 { top: 44%;     right: -6px;  width: 28px; --rot:  18deg; opacity: .36; --dur: 11.2s; --delay: -0.5s; }
+  .pressed.p19 { top: 60%;     right: -18px; width: 52px; --rot: -21deg; opacity: .28; --dur: 13.2s; --delay: -8.5s; }
+  .pressed.p20 { top: 70%;     left: 6px;    width: 30px; --rot:   9deg; opacity: .38; --dur: 9.2s;  --delay: -2.2s; }
+  .pressed.p21 { top: 84%;     right: -8px;  width: 32px; --rot:  26deg; opacity: .32; --dur: 14.2s; --delay: -6s; }
+  .pressed.p22 { top: 94%;     right: 30px;  width: 38px; --rot: -13deg; opacity: .34; --dur: 10.8s; --delay: -4.2s; }
+  .pressed.p23 { top: 46%;     left: 8px;    width: 24px; --rot: -32deg; opacity: .30; --dur: 12.2s; --delay: -9.5s; }
+  .pressed.p24 { top: 10%;     right: 96px;  width: 30px; --rot:  14deg; opacity: .24; --dur: 13.8s; --delay: -1.2s; }
+  .pressed.p25 { top: 2%;    left: 40px;    width: 24px; --rot:   30deg; opacity: .30; --dur: 10.6s; --delay: -3.1s; }
+  .pressed.p26 { top: 2%;    right: 110px;  width: 22px; --rot:  -27deg; opacity: .24; --dur: 12.4s; --delay: -7.9s; }
+  .pressed.p27 { top: 12%;   right: 40px;   width: 22px; --rot:   17deg; opacity: .26; --dur: 11.6s; --delay: -5.2s; }
+  .pressed.p28 { top: 26%;   left: 12px;    width: 22px; --rot:  -22deg; opacity: .32; --dur: 9.6s; --delay: -0.8s; }
+  .pressed.p29 { top: 38%;   left: -10px;   width: 40px; --rot:    7deg; opacity: .30; --dur: 14.8s; --delay: -8.2s; }
+  .pressed.p30 { top: 40%;   right: 22px;   width: 20px; --rot:  -14deg; opacity: .22; --dur: 13.6s; --delay: -2.9s; }
+  .pressed.p31 { top: 56%;   left: -14px;   width: 46px; --rot:  -18deg; opacity: .28; --dur: 15.2s; --delay: -6.8s; }
+  .pressed.p32 { top: 64%;   right: 6px;    width: 24px; --rot:   23deg; opacity: .30; --dur: 10.9s; --delay: -4.6s; }
+  .pressed.p33 { top: 72%;   right: -12px;  width: 36px; --rot:   -8deg; opacity: .32; --dur: 12.6s; --delay: -9.1s; }
+  .pressed.p34 { top: 76%;   left: 10px;    width: 22px; --rot:   28deg; opacity: .28; --dur: 9.4s; --delay: -1.7s; }
+  .pressed.p35 { top: 82%;   left: -12px;   width: 40px; --rot:  -16deg; opacity: .34; --dur: 13.9s; --delay: -5.9s; }
+  .pressed.p36 { top: 90%;   right: -16px;  width: 44px; --rot:   11deg; opacity: .30; --dur: 11.8s; --delay: -8.8s; }
+  .pressed.p37 { top: 96%;   left: 30px;    width: 28px; --rot:  -24deg; opacity: .32; --dur: 14.4s; --delay: -2.4s; }
+  .pressed.p38 { top: 98%;   right: 80px;   width: 24px; --rot:   19deg; opacity: .26; --dur: 10.1s; --delay: -6.2s; }
+  .pressed.p39 { top: 50%;   right: -20px;  width: 30px; --rot:  -30deg; opacity: .28; --dur: 12.9s; --delay: -3.8s; }
+  .pressed.p40 { top: 18%;   left: -14px;   width: 44px; --rot:    5deg; opacity: .30; --dur: 15.6s; --delay: -7.2s; }
 
   .sheet > *:not(.pressed) { position: relative; z-index: 1; }
+
+
+
+  /* flowers sitting right on the paper's edge, half on and half off */
+  .edging {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+  }
+  .edge {
+    position: absolute;
+    --rot: 0deg;
+    --lift: 3px;
+    transform: rotate(var(--rot));
+    transform-origin: 50% 90%;
+    animation: sway var(--dur, 10s) ease-in-out var(--delay, 0s) infinite;
+  }
+
+  .edge.e1  { left:  4%; top: -14px; width: 34px; --rot:  -18deg; opacity: .51; --dur: 9.5s; --delay: -1.7s; }
+  .edge.e2  { left: 15%; top: -14px; width: 26px; --rot:   12deg; opacity: .56; --dur: 10.1s; --delay: -3.4s; }
+  .edge.e3  { left: 27%; top: -14px; width: 40px; --rot:   -7deg; opacity: .61; --dur: 10.6s; --delay: -5.1s; }
+  .edge.e4  { left: 38%; top: -14px; width: 28px; --rot:   22deg; opacity: .66; --dur: 11.1s; --delay: -6.8s; }
+  .edge.e5  { left: 50%; top: -14px; width: 36px; --rot:  -14deg; opacity: .71; --dur: 11.7s; --delay: -8.5s; }
+  .edge.e6  { left: 62%; top: -14px; width: 30px; --rot:    9deg; opacity: .50; --dur: 12.2s; --delay: -1.2s; }
+  .edge.e7  { left: 73%; top: -14px; width: 42px; --rot:  -25deg; opacity: .55; --dur: 12.7s; --delay: -2.9s; }
+  .edge.e8  { left: 85%; top: -14px; width: 28px; --rot:   16deg; opacity: .60; --dur: 13.2s; --delay: -4.6s; }
+  .edge.e9  { left: 94%; top: -14px; width: 34px; --rot:   -5deg; opacity: .65; --dur: 13.8s; --delay: -6.3s; }
+  .edge.e10 { left:  6%; bottom: -14px; width: 36px; --rot:   14deg; opacity: .70; --dur: 14.3s; --delay: -8.0s; }
+  .edge.e11 { left: 17%; bottom: -14px; width: 28px; --rot:  -20deg; opacity: .49; --dur: 14.8s; --delay: -0.7s; }
+  .edge.e12 { left: 29%; bottom: -14px; width: 42px; --rot:    6deg; opacity: .54; --dur: 9.4s; --delay: -2.4s; }
+  .edge.e13 { left: 41%; bottom: -14px; width: 30px; --rot:  -11deg; opacity: .59; --dur: 9.9s; --delay: -4.1s; }
+  .edge.e14 { left: 53%; bottom: -14px; width: 34px; --rot:   24deg; opacity: .64; --dur: 10.4s; --delay: -5.8s; }
+  .edge.e15 { left: 65%; bottom: -14px; width: 26px; --rot:   -8deg; opacity: .69; --dur: 10.9s; --delay: -7.5s; }
+  .edge.e16 { left: 76%; bottom: -14px; width: 40px; --rot:   17deg; opacity: .48; --dur: 11.5s; --delay: -0.2s; }
+  .edge.e17 { left: 88%; bottom: -14px; width: 30px; --rot:  -23deg; opacity: .53; --dur: 12.0s; --delay: -1.9s; }
+  .edge.e18 { left: 96%; bottom: -14px; width: 32px; --rot:   10deg; opacity: .58; --dur: 12.5s; --delay: -3.6s; }
+  .edge.e19 { left: -14px; top:  8%; width: 30px; --rot:  -16deg; opacity: .63; --dur: 13.1s; --delay: -5.3s; }
+  .edge.e20 { left: -14px; top: 21%; width: 38px; --rot:    7deg; opacity: .68; --dur: 13.6s; --delay: -7.0s; }
+  .edge.e21 { left: -14px; top: 34%; width: 28px; --rot:   20deg; opacity: .47; --dur: 14.1s; --delay: -8.7s; }
+  .edge.e22 { left: -14px; top: 47%; width: 34px; --rot:   -9deg; opacity: .52; --dur: 14.7s; --delay: -1.4s; }
+  .edge.e23 { left: -14px; top: 60%; width: 30px; --rot:   15deg; opacity: .57; --dur: 9.2s; --delay: -3.1s; }
+  .edge.e24 { left: -14px; top: 73%; width: 36px; --rot:  -22deg; opacity: .62; --dur: 9.7s; --delay: -4.8s; }
+  .edge.e25 { left: -14px; top: 86%; width: 28px; --rot:   11deg; opacity: .67; --dur: 10.2s; --delay: -6.5s; }
+  .edge.e26 { right: -14px; top:  5%; width: 32px; --rot:   18deg; opacity: .46; --dur: 10.8s; --delay: -8.2s; }
+  .edge.e27 { right: -14px; top: 18%; width: 28px; --rot:  -13deg; opacity: .51; --dur: 11.3s; --delay: -0.9s; }
+  .edge.e28 { right: -14px; top: 31%; width: 40px; --rot:    5deg; opacity: .56; --dur: 11.8s; --delay: -2.6s; }
+  .edge.e29 { right: -14px; top: 44%; width: 30px; --rot:  -19deg; opacity: .61; --dur: 12.4s; --delay: -4.3s; }
+  .edge.e30 { right: -14px; top: 57%; width: 34px; --rot:    9deg; opacity: .66; --dur: 12.9s; --delay: -6.0s; }
+  .edge.e31 { right: -14px; top: 70%; width: 28px; --rot:   -6deg; opacity: .71; --dur: 13.4s; --delay: -7.7s; }
+  .edge.e32 { right: -14px; top: 83%; width: 38px; --rot:   21deg; opacity: .50; --dur: 14.0s; --delay: -0.4s; }
+  .edge.e33 { right: -14px; top: 95%; width: 30px; --rot:  -15deg; opacity: .55; --dur: 14.5s; --delay: -2.1s; }
+
+  /* flowers on the desk either side of the paper */
+  body { position: relative; }
+
+  .side {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+    --rot: 0deg;
+    --lift: 4px;
+    transform: rotate(var(--rot));
+    transform-origin: 50% 90%;
+    animation: sway var(--dur, 11s) ease-in-out var(--delay, 0s) infinite;
+  }
+  /* no room for them once the paper fills the screen */
+  @media (max-width: 900px) { .side { display: none; } }
+
+  .side.s1  { left:  2%; top:  3%; width: 54px; --rot:   14deg; opacity: .41; --dur: 9.5s; --delay: -1.3s; }
+  .side.s2  { left:  7%; top: 11%; width: 38px; --rot:  -21deg; opacity: .48; --dur: 9.9s; --delay: -2.6s; }
+  .side.s3  { left:  3%; top: 19%; width: 72px; --rot:    8deg; opacity: .55; --dur: 10.4s; --delay: -3.9s; }
+  .side.s4  { left:  9%; top: 27%; width: 44px; --rot:   -9deg; opacity: .40; --dur: 10.9s; --delay: -5.2s; }
+  .side.s5  { left:  1%; top: 35%; width: 60px; --rot:   25deg; opacity: .47; --dur: 11.3s; --delay: -6.6s; }
+  .side.s6  { left:  8%; top: 43%; width: 40px; --rot:  -17deg; opacity: .54; --dur: 11.8s; --delay: -7.9s; }
+  .side.s7  { left:  2%; top: 51%; width: 78px; --rot:    6deg; opacity: .39; --dur: 12.3s; --delay: -9.2s; }
+  .side.s8  { left: 10%; top: 59%; width: 36px; --rot:   20deg; opacity: .46; --dur: 12.8s; --delay: -0.5s; }
+  .side.s9  { left:  4%; top: 67%; width: 64px; --rot:  -13deg; opacity: .53; --dur: 13.2s; --delay: -1.8s; }
+  .side.s10 { left:  8%; top: 75%; width: 42px; --rot:   11deg; opacity: .38; --dur: 13.7s; --delay: -3.1s; }
+  .side.s11 { left:  1%; top: 83%; width: 70px; --rot:  -24deg; opacity: .45; --dur: 14.2s; --delay: -4.4s; }
+  .side.s12 { left:  9%; top: 91%; width: 38px; --rot:   16deg; opacity: .52; --dur: 14.6s; --delay: -5.7s; }
+  .side.s13 { left:  5%; top: 97%; width: 52px; --rot:   -7deg; opacity: .37; --dur: 15.1s; --delay: -7.0s; }
+  .side.s14 { right:  3%; top:  5%; width: 64px; --rot:  -12deg; opacity: .44; --dur: 15.6s; --delay: -8.3s; }
+  .side.s15 { right:  9%; top: 13%; width: 40px; --rot:   18deg; opacity: .51; --dur: 9.1s; --delay: -9.7s; }
+  .side.s16 { right:  2%; top: 21%; width: 76px; --rot:   -6deg; opacity: .36; --dur: 9.5s; --delay: -1.0s; }
+  .side.s17 { right:  8%; top: 29%; width: 38px; --rot:   23deg; opacity: .43; --dur: 10.0s; --delay: -2.3s; }
+  .side.s18 { right:  4%; top: 37%; width: 58px; --rot:  -19deg; opacity: .50; --dur: 10.5s; --delay: -3.6s; }
+  .side.s19 { right: 10%; top: 45%; width: 42px; --rot:    9deg; opacity: .35; --dur: 10.9s; --delay: -4.9s; }
+  .side.s20 { right:  1%; top: 53%; width: 74px; --rot:  -15deg; opacity: .42; --dur: 11.4s; --delay: -6.2s; }
+  .side.s21 { right:  7%; top: 61%; width: 36px; --rot:   27deg; opacity: .49; --dur: 11.9s; --delay: -7.5s; }
+  .side.s22 { right:  3%; top: 69%; width: 66px; --rot:  -10deg; opacity: .34; --dur: 12.3s; --delay: -8.8s; }
+  .side.s23 { right:  9%; top: 77%; width: 40px; --rot:   14deg; opacity: .41; --dur: 12.8s; --delay: -0.1s; }
+  .side.s24 { right:  2%; top: 85%; width: 72px; --rot:  -22deg; opacity: .48; --dur: 13.3s; --delay: -1.4s; }
+  .side.s25 { right:  8%; top: 93%; width: 38px; --rot:    7deg; opacity: .55; --dur: 13.8s; --delay: -2.8s; }
+  .side.s26 { right:  5%; top: 99%; width: 50px; --rot:   19deg; opacity: .40; --dur: 14.2s; --delay: -4.1s; }
 
   /* ── type ───────────────────────────────────────────────────── */
   .eyebrow {
@@ -423,6 +552,11 @@
     .pressed.p3, .pressed.p8 { display: none; }
     .pressed.p9, .pressed.p11, .pressed.p12, .pressed.p14 { width: 26px; }
     .pressed.p10, .pressed.p13 { display: none; }
+    .pressed.p15, .pressed.p18, .pressed.p20, .pressed.p23 { width: 22px; }
+    .pressed.p17, .pressed.p19, .pressed.p22 { width: 30px; }
+    .pressed.p16, .pressed.p21, .pressed.p24 { display: none; }
+    .pressed.p25, .pressed.p26, .pressed.p27, .pressed.p28, .pressed.p30, .pressed.p32, .pressed.p33, .pressed.p34, .pressed.p37, .pressed.p38, .pressed.p39 { display: none; }
+    .pressed.p29, .pressed.p31, .pressed.p35, .pressed.p36, .pressed.p40 { width: 26px; }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -433,6 +567,32 @@
 </style>
 </head>
 <body>
+  <svg class="side s1" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="side s2" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="side s3" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="side s4" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="side s5" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="side s6" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="side s7" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="side s8" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="side s9" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="side s10" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="side s11" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="side s12" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="side s13" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="side s14" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="side s15" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="side s16" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="side s17" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="side s18" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="side s19" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="side s20" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="side s21" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="side s22" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="side s23" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="side s24" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="side s25" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="side s26" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="bloom" viewBox="0 0 100 100">
@@ -481,6 +641,7 @@
   </symbol>
 </svg>
 
+<div class="sheet-wrap">
 <div class="sheet">
   <svg class="pressed p1" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
   <svg class="pressed p2" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
@@ -496,6 +657,32 @@
   <svg class="pressed p12" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
   <svg class="pressed p13" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
   <svg class="pressed p14" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p15" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p16" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p17" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p18" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p19" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p20" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p21" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p22" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p23" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p24" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p25" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p26" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p27" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p28" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p29" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p30" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p31" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p32" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p33" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p34" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p35" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p36" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p37" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p38" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p39" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p40" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
 
   <p class="eyebrow">for my baby</p>
 
@@ -577,6 +764,42 @@
     <button class="again" id="again" type="button">let me read it again</button>
   </div>
 </div>
+  <div class="edging" aria-hidden="true">
+    <svg class="edge e1" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+    <svg class="edge e2" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+    <svg class="edge e3" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+    <svg class="edge e4" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+    <svg class="edge e5" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+    <svg class="edge e6" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+    <svg class="edge e7" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+    <svg class="edge e8" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+    <svg class="edge e9" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+    <svg class="edge e10" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+    <svg class="edge e11" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+    <svg class="edge e12" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+    <svg class="edge e13" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+    <svg class="edge e14" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+    <svg class="edge e15" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+    <svg class="edge e16" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+    <svg class="edge e17" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+    <svg class="edge e18" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+    <svg class="edge e19" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+    <svg class="edge e20" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+    <svg class="edge e21" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+    <svg class="edge e22" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+    <svg class="edge e23" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+    <svg class="edge e24" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+    <svg class="edge e25" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+    <svg class="edge e26" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+    <svg class="edge e27" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+    <svg class="edge e28" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+    <svg class="edge e29" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+    <svg class="edge e30" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+    <svg class="edge e31" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+    <svg class="edge e32" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+    <svg class="edge e33" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  </div>
+</div>
 
 <canvas class="ambient" id="ambient" aria-hidden="true"></canvas>
 <canvas class="confetti" id="confetti" aria-hidden="true"></canvas>
@@ -622,7 +845,7 @@
   }
 
   var petals = [];
-  var N = innerWidth < 560 ? 16 : 30;
+  var N = innerWidth < 560 ? 26 : 62;
   for (var i = 0; i < N; i++) petals.push(make(true));
 
   function frame() {

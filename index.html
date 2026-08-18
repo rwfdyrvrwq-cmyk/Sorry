@@ -147,6 +147,12 @@
   .pressed.p6 { bottom: 14px;   right: 24px;  width: 68px; --rot:   8deg; opacity: .46; --dur: 9.5s;  --delay: -3s; }
   .pressed.p7 { top: 66%;       left: -4px;   width: 38px; --rot:  20deg; opacity: .34; --dur: 11.5s; --delay: -6s; }
   .pressed.p8 { bottom: 42%;    right: -14px; width: 44px; --rot: -14deg; opacity: .28; --dur: 14s;   --delay: -4s; }
+  .pressed.p9  { top: 16%;     left: -6px;   width: 30px; --rot:  22deg; opacity: .36; --dur: 10.5s; --delay: -8s; }
+  .pressed.p10 { top: 24%;     right: -12px; width: 34px; --rot: -11deg; opacity: .32; --dur: 12s;   --delay: -2.5s; }
+  .pressed.p11 { top: 34%;     left: 2px;    width: 38px; --rot:  15deg; opacity: .40; --dur: 13.5s; --delay: -9s; }
+  .pressed.p12 { top: 52%;     left: -8px;   width: 34px; --rot: -19deg; opacity: .34; --dur: 11s;   --delay: -4.5s; }
+  .pressed.p13 { top: 78%;     right: -14px; width: 46px; --rot:   6deg; opacity: .30; --dur: 14.5s; --delay: -6.5s; }
+  .pressed.p14 { top: 88%;     left: -6px;   width: 34px; --rot: -25deg; opacity: .38; --dur: 9.8s;  --delay: -1.5s; }
 
   .sheet > *:not(.pressed) { position: relative; z-index: 1; }
 
@@ -415,6 +421,8 @@
     .pressed.p2, .pressed.p5 { width: 32px; }
     .pressed.p4, .pressed.p7 { width: 28px; }
     .pressed.p3, .pressed.p8 { display: none; }
+    .pressed.p9, .pressed.p11, .pressed.p12, .pressed.p14 { width: 26px; }
+    .pressed.p10, .pressed.p13 { display: none; }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -482,6 +490,12 @@
   <svg class="pressed p6" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
   <svg class="pressed p7" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
   <svg class="pressed p8" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p9"  viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p10" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p11" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p12" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p13" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p14" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
 
   <p class="eyebrow">for my baby</p>
 
@@ -608,7 +622,7 @@
   }
 
   var petals = [];
-  var N = innerWidth < 560 ? 12 : 20;
+  var N = innerWidth < 560 ? 16 : 30;
   for (var i = 0; i < N; i++) petals.push(make(true));
 
   function frame() {

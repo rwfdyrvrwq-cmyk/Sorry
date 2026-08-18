@@ -62,6 +62,8 @@
 
   * { box-sizing: border-box; }
 
+  html { overflow-x: hidden; }
+
   body {
     margin: 0;
     background: var(--desk);
@@ -187,6 +189,225 @@
   .pressed.p38 { top: 98%;   right: 80px;   width: 24px; --rot:   19deg; opacity: .26; --dur: 10.1s; --delay: -6.2s; }
   .pressed.p39 { top: 50%;   right: -20px;  width: 30px; --rot:  -30deg; opacity: .28; --dur: 12.9s; --delay: -3.8s; }
   .pressed.p40 { top: 18%;   left: -14px;   width: 44px; --rot:    5deg; opacity: .30; --dur: 15.6s; --delay: -7.2s; }
+  .pressed.p41 { left: 8px;  top:  4%;      width: 26px; --rot:  -14deg; opacity: .30; --dur: 13.0s; --delay: -8.6s; }
+  .pressed.p42 { left: 8px;  top: 11%;      width: 22px; --rot:   19deg; opacity: .30; --dur: 13.6s; --delay: -0.1s; }
+  .pressed.p43 { left: 8px;  top: 23%;      width: 28px; --rot:   -8deg; opacity: .30; --dur: 14.2s; --delay: -1.5s; }
+  .pressed.p44 { left: 8px;  top: 31%;      width: 24px; --rot:   25deg; opacity: .30; --dur: 14.8s; --delay: -2.9s; }
+  .pressed.p45 { left: 8px;  top: 42%;      width: 26px; --rot:  -20deg; opacity: .30; --dur: 15.4s; --delay: -4.3s; }
+  .pressed.p46 { left: 8px;  top: 49%;      width: 22px; --rot:   11deg; opacity: .30; --dur: 9.1s; --delay: -5.8s; }
+  .pressed.p47 { left: 8px;  top: 57%;      width: 28px; --rot:  -16deg; opacity: .30; --dur: 9.7s; --delay: -7.2s; }
+  .pressed.p48 { left: 8px;  top: 65%;      width: 24px; --rot:    7deg; opacity: .30; --dur: 10.3s; --delay: -8.6s; }
+  .pressed.p49 { left: 8px;  top: 81%;      width: 26px; --rot:  -27deg; opacity: .30; --dur: 10.9s; --delay: -0.1s; }
+  .pressed.p50 { left: 8px;  top: 92%;      width: 22px; --rot:   13deg; opacity: .30; --dur: 11.5s; --delay: -1.5s; }
+  .pressed.p51 { right: 6px; top:  7%;      width: 24px; --rot:   16deg; opacity: .26; --dur: 12.1s; --delay: -2.9s; }
+  .pressed.p52 { right: 6px; top: 15%;      width: 28px; --rot:  -11deg; opacity: .26; --dur: 12.7s; --delay: -4.4s; }
+  .pressed.p53 { right: 6px; top: 28%;      width: 22px; --rot:   22deg; opacity: .26; --dur: 13.3s; --delay: -5.8s; }
+  .pressed.p54 { right: 6px; top: 36%;      width: 26px; --rot:   -6deg; opacity: .26; --dur: 13.9s; --delay: -7.2s; }
+  .pressed.p55 { right: 6px; top: 48%;      width: 24px; --rot:   18deg; opacity: .26; --dur: 14.5s; --delay: -8.6s; }
+  .pressed.p56 { right: 6px; top: 55%;      width: 28px; --rot:  -24deg; opacity: .26; --dur: 15.2s; --delay: -0.1s; }
+  .pressed.p57 { right: 6px; top: 68%;      width: 22px; --rot:    9deg; opacity: .26; --dur: 15.8s; --delay: -1.5s; }
+  .pressed.p58 { right: 6px; top: 76%;      width: 26px; --rot:  -15deg; opacity: .26; --dur: 9.4s; --delay: -2.9s; }
+  .pressed.p59 { right: 6px; top: 88%;      width: 24px; --rot:   20deg; opacity: .26; --dur: 10.0s; --delay: -4.4s; }
+  .pressed.p60 { right: 6px; top: 97%;      width: 28px; --rot:   -9deg; opacity: .26; --dur: 10.6s; --delay: -5.8s; }
+  .pressed.p61 { left: 44%;  top: 18%;      width: 20px; --rot:   12deg; opacity: .16; --dur: 11.2s; --delay: -7.2s; }
+  .pressed.p62 { left: 52%;  top: 33%;      width: 18px; --rot:  -17deg; opacity: .16; --dur: 11.8s; --delay: -8.7s; }
+  .pressed.p63 { left: 40%;  top: 46%;      width: 22px; --rot:    8deg; opacity: .16; --dur: 12.4s; --delay: -0.1s; }
+  .pressed.p64 { left: 56%;  top: 58%;      width: 18px; --rot:  -23deg; opacity: .16; --dur: 13.0s; --delay: -1.5s; }
+  .pressed.p65 { left: 46%;  top: 71%;      width: 20px; --rot:   15deg; opacity: .16; --dur: 13.6s; --delay: -3.0s; }
+  .pressed.p66 { left: 54%;  top: 84%;      width: 18px; --rot:  -10deg; opacity: .16; --dur: 14.3s; --delay: -4.4s; }
+  .pressed.p67  { left: 10px; top:  2%;      width: 22px; --rot:   -5deg; opacity: .36; --dur: 9.8s; --delay: -2.7s; }
+  .pressed.p68  { left: 2px; top:  6%;       width: 18px; --rot:   22deg; opacity: .36; --dur: 10.2s; --delay: -3.9s; }
+  .pressed.p69  { left: 2px; top: 10%;       width: 26px; --rot:    7deg; opacity: .28; --dur: 10.5s; --delay: -5.1s; }
+  .pressed.p70  { left: 18px; top: 14%;      width: 22px; --rot:  -28deg; opacity: .28; --dur: 10.9s; --delay: -6.3s; }
+  .pressed.p71  { left: 10px; top: 18%;      width: 30px; --rot:  -26deg; opacity: .28; --dur: 11.3s; --delay: -7.5s; }
+  .pressed.p72  { left: 2px; top: 22%;       width: 30px; --rot:  -27deg; opacity: .36; --dur: 11.6s; --delay: -8.7s; }
+  .pressed.p73  { left: 2px; top: 26%;       width: 22px; --rot:   10deg; opacity: .36; --dur: 12.0s; --delay: -9.9s; }
+  .pressed.p74  { left: 18px; top: 30%;      width: 18px; --rot:    6deg; opacity: .36; --dur: 12.4s; --delay: -0.1s; }
+  .pressed.p75  { left: 10px; top: 34%;      width: 18px; --rot:  -16deg; opacity: .28; --dur: 12.8s; --delay: -1.2s; }
+  .pressed.p76  { left: 18px; top: 38%;      width: 22px; --rot:  -12deg; opacity: .32; --dur: 13.1s; --delay: -2.4s; }
+  .pressed.p77  { left: 2px; top: 42%;       width: 18px; --rot:    6deg; opacity: .32; --dur: 13.5s; --delay: -3.6s; }
+  .pressed.p78  { left: 18px; top: 46%;      width: 22px; --rot:  -24deg; opacity: .36; --dur: 13.9s; --delay: -4.8s; }
+  .pressed.p79  { left: 18px; top: 50%;      width: 22px; --rot:   -7deg; opacity: .28; --dur: 14.2s; --delay: -6.0s; }
+  .pressed.p80  { left: 18px; top: 54%;      width: 18px; --rot:    6deg; opacity: .28; --dur: 14.6s; --delay: -7.2s; }
+  .pressed.p81  { left: 18px; top: 58%;      width: 22px; --rot:    1deg; opacity: .36; --dur: 15.0s; --delay: -8.4s; }
+  .pressed.p82  { left: 18px; top: 62%;      width: 30px; --rot:   19deg; opacity: .32; --dur: 15.3s; --delay: -9.6s; }
+  .pressed.p83  { left: 10px; top: 66%;      width: 30px; --rot:   -7deg; opacity: .32; --dur: 15.7s; --delay: -10.8s; }
+  .pressed.p84  { left: 2px; top: 70%;       width: 22px; --rot:   14deg; opacity: .28; --dur: 16.1s; --delay: -1.0s; }
+  .pressed.p85  { left: 2px; top: 74%;       width: 26px; --rot:    3deg; opacity: .32; --dur: 16.4s; --delay: -2.1s; }
+  .pressed.p86  { left: 10px; top: 78%;      width: 30px; --rot:  -12deg; opacity: .36; --dur: 16.8s; --delay: -3.3s; }
+  .pressed.p87  { left: 2px; top: 82%;       width: 18px; --rot:    2deg; opacity: .32; --dur: 9.2s; --delay: -4.5s; }
+  .pressed.p88  { left: 2px; top: 86%;       width: 26px; --rot:  -21deg; opacity: .32; --dur: 9.6s; --delay: -5.7s; }
+  .pressed.p89  { left: 10px; top: 90%;      width: 18px; --rot:   12deg; opacity: .28; --dur: 9.9s; --delay: -6.9s; }
+  .pressed.p90  { left: 18px; top: 94%;      width: 26px; --rot:   -9deg; opacity: .36; --dur: 10.3s; --delay: -8.1s; }
+  .pressed.p91  { left: 10px; top: 98%;      width: 30px; --rot:    7deg; opacity: .32; --dur: 10.7s; --delay: -9.3s; }
+  .pressed.p92  { right: 2px; top:  5%;      width: 18px; --rot:   30deg; opacity: .28; --dur: 11.0s; --delay: -10.5s; }
+  .pressed.p93  { right: 10px; top:  9%;     width: 18px; --rot:  -27deg; opacity: .32; --dur: 11.4s; --delay: -0.7s; }
+  .pressed.p94  { right: 18px; top: 13%;     width: 26px; --rot:   11deg; opacity: .32; --dur: 11.8s; --delay: -1.9s; }
+  .pressed.p95  { right: 18px; top: 17%;     width: 30px; --rot:  -12deg; opacity: .32; --dur: 12.1s; --delay: -3.0s; }
+  .pressed.p96  { right: 10px; top: 21%;     width: 26px; --rot:  -29deg; opacity: .28; --dur: 12.5s; --delay: -4.2s; }
+  .pressed.p97  { right: 10px; top: 25%;     width: 22px; --rot:    9deg; opacity: .24; --dur: 12.9s; --delay: -5.4s; }
+  .pressed.p98  { right: 10px; top: 29%;     width: 18px; --rot:  -17deg; opacity: .28; --dur: 13.3s; --delay: -6.6s; }
+  .pressed.p99  { right: 2px; top: 33%;      width: 22px; --rot:   -5deg; opacity: .28; --dur: 13.6s; --delay: -7.8s; }
+  .pressed.p100 { right: 10px; top: 37%;     width: 18px; --rot:  -20deg; opacity: .28; --dur: 14.0s; --delay: -9.0s; }
+  .pressed.p101 { right: 10px; top: 41%;     width: 26px; --rot:   26deg; opacity: .24; --dur: 14.4s; --delay: -10.2s; }
+  .pressed.p102 { right: 10px; top: 45%;     width: 26px; --rot:   15deg; opacity: .28; --dur: 14.7s; --delay: -0.4s; }
+  .pressed.p103 { right: 10px; top: 49%;     width: 30px; --rot:  -16deg; opacity: .24; --dur: 15.1s; --delay: -1.6s; }
+  .pressed.p104 { right: 2px; top: 53%;      width: 22px; --rot:  -21deg; opacity: .24; --dur: 15.5s; --delay: -2.8s; }
+  .pressed.p105 { right: 18px; top: 57%;     width: 22px; --rot:  -30deg; opacity: .28; --dur: 15.9s; --delay: -3.9s; }
+  .pressed.p106 { right: 18px; top: 61%;     width: 22px; --rot:  -14deg; opacity: .28; --dur: 16.2s; --delay: -5.1s; }
+  .pressed.p107 { right: 2px; top: 65%;      width: 22px; --rot:   -4deg; opacity: .32; --dur: 16.6s; --delay: -6.3s; }
+  .pressed.p108 { right: 10px; top: 69%;     width: 26px; --rot:   30deg; opacity: .24; --dur: 17.0s; --delay: -7.5s; }
+  .pressed.p109 { right: 18px; top: 73%;     width: 18px; --rot:   -1deg; opacity: .32; --dur: 9.3s; --delay: -8.7s; }
+  .pressed.p110 { right: 18px; top: 77%;     width: 30px; --rot:   -5deg; opacity: .28; --dur: 9.7s; --delay: -9.9s; }
+  .pressed.p111 { right: 10px; top: 81%;     width: 18px; --rot:    0deg; opacity: .32; --dur: 10.1s; --delay: -0.1s; }
+  .pressed.p112 { right: 10px; top: 85%;     width: 18px; --rot:  -18deg; opacity: .24; --dur: 10.4s; --delay: -1.3s; }
+  .pressed.p113 { right: 2px; top: 89%;      width: 30px; --rot:  -20deg; opacity: .24; --dur: 10.8s; --delay: -2.5s; }
+  .pressed.p114 { right: 10px; top: 93%;     width: 18px; --rot:  -24deg; opacity: .24; --dur: 11.2s; --delay: -3.7s; }
+  .pressed.p115 { right: 18px; top: 97%;     width: 22px; --rot:    4deg; opacity: .24; --dur: 11.5s; --delay: -4.8s; }
+  .pressed.p116 { left: 45%; top:  9%;       width: 16px; --rot:  -24deg; opacity: .12; --dur: 11.9s; --delay: -6.0s; }
+  .pressed.p117 { left: 53%; top: 16%;       width: 22px; --rot:  -19deg; opacity: .16; --dur: 12.3s; --delay: -7.2s; }
+  .pressed.p118 { left: 42%; top: 23%;       width: 20px; --rot:   10deg; opacity: .14; --dur: 12.7s; --delay: -8.4s; }
+  .pressed.p119 { left: 49%; top: 30%;       width: 16px; --rot:  -21deg; opacity: .14; --dur: 13.0s; --delay: -9.6s; }
+  .pressed.p120 { left: 48%; top: 37%;       width: 22px; --rot:    2deg; opacity: .14; --dur: 13.4s; --delay: -10.8s; }
+  .pressed.p121 { left: 36%; top: 44%;       width: 18px; --rot:  -22deg; opacity: .16; --dur: 13.8s; --delay: -1.0s; }
+  .pressed.p122 { left: 44%; top: 51%;       width: 20px; --rot:    2deg; opacity: .16; --dur: 14.1s; --delay: -2.2s; }
+  .pressed.p123 { left: 39%; top: 58%;       width: 16px; --rot:  -15deg; opacity: .16; --dur: 14.5s; --delay: -3.4s; }
+  .pressed.p124 { left: 45%; top: 65%;       width: 18px; --rot:   16deg; opacity: .16; --dur: 14.9s; --delay: -4.6s; }
+  .pressed.p125 { left: 34%; top: 72%;       width: 20px; --rot:   13deg; opacity: .12; --dur: 15.2s; --delay: -5.8s; }
+  .pressed.p126 { left: 56%; top: 79%;       width: 20px; --rot:    5deg; opacity: .14; --dur: 15.6s; --delay: -6.9s; }
+  .pressed.p127 { left: 39%; top: 86%;       width: 20px; --rot:   21deg; opacity: .12; --dur: 16.0s; --delay: -8.1s; }
+  .pressed.p128 { left: 51%; top: 93%;       width: 20px; --rot:   12deg; opacity: .12; --dur: 16.4s; --delay: -9.3s; }
+  .pressed.p129 { left: 14px; top:  1%;      width: 16px; --rot:  -30deg; opacity: .34; --dur: 13.9s; --delay: -5.1s; }
+  .pressed.p130 { left: 22px; top:  3%;      width: 28px; --rot:   13deg; opacity: .30; --dur: 14.2s; --delay: -6.1s; }
+  .pressed.p131 { left: 6px; top:  5%;       width: 24px; --rot:   24deg; opacity: .26; --dur: 14.5s; --delay: -7.1s; }
+  .pressed.p132 { left: 6px; top:  7%;       width: 28px; --rot:  -29deg; opacity: .26; --dur: 14.8s; --delay: -8.0s; }
+  .pressed.p133 { left: 0px; top:  9%;       width: 28px; --rot:   21deg; opacity: .26; --dur: 15.1s; --delay: -9.0s; }
+  .pressed.p134 { left: 30px; top: 11%;      width: 28px; --rot:   13deg; opacity: .26; --dur: 15.4s; --delay: -10.0s; }
+  .pressed.p135 { left: 6px; top: 13%;       width: 16px; --rot:   15deg; opacity: .30; --dur: 15.6s; --delay: -10.9s; }
+  .pressed.p136 { left: 30px; top: 15%;      width: 20px; --rot:   14deg; opacity: .34; --dur: 15.9s; --delay: -11.9s; }
+  .pressed.p137 { left: 30px; top: 17%;      width: 24px; --rot:    8deg; opacity: .26; --dur: 16.2s; --delay: -0.9s; }
+  .pressed.p138 { left: 22px; top: 19%;      width: 20px; --rot:   29deg; opacity: .38; --dur: 8.5s; --delay: -1.9s; }
+  .pressed.p139 { left: 6px; top: 21%;       width: 20px; --rot:  -10deg; opacity: .34; --dur: 8.8s; --delay: -2.8s; }
+  .pressed.p140 { left: 30px; top: 23%;      width: 20px; --rot:  -18deg; opacity: .26; --dur: 9.1s; --delay: -3.8s; }
+  .pressed.p141 { left: 0px; top: 25%;       width: 28px; --rot:  -28deg; opacity: .34; --dur: 9.4s; --delay: -4.8s; }
+  .pressed.p142 { left: 30px; top: 27%;      width: 24px; --rot:   10deg; opacity: .26; --dur: 9.7s; --delay: -5.7s; }
+  .pressed.p143 { left: 14px; top: 29%;      width: 24px; --rot:    7deg; opacity: .38; --dur: 10.0s; --delay: -6.7s; }
+  .pressed.p144 { left: 30px; top: 31%;      width: 20px; --rot:    1deg; opacity: .30; --dur: 10.3s; --delay: -7.7s; }
+  .pressed.p145 { left: 0px; top: 33%;       width: 16px; --rot:   31deg; opacity: .30; --dur: 10.5s; --delay: -8.7s; }
+  .pressed.p146 { left: 14px; top: 35%;      width: 20px; --rot:  -20deg; opacity: .38; --dur: 10.8s; --delay: -9.6s; }
+  .pressed.p147 { left: 6px; top: 37%;       width: 28px; --rot:  -28deg; opacity: .26; --dur: 11.1s; --delay: -10.6s; }
+  .pressed.p148 { left: 22px; top: 39%;      width: 28px; --rot:  -30deg; opacity: .30; --dur: 11.4s; --delay: -11.6s; }
+  .pressed.p149 { left: 6px; top: 41%;       width: 16px; --rot:   -4deg; opacity: .26; --dur: 11.7s; --delay: -0.5s; }
+  .pressed.p150 { left: 30px; top: 43%;      width: 28px; --rot:  -21deg; opacity: .34; --dur: 12.0s; --delay: -1.5s; }
+  .pressed.p151 { left: 0px; top: 45%;       width: 28px; --rot:   30deg; opacity: .30; --dur: 12.3s; --delay: -2.5s; }
+  .pressed.p152 { left: 0px; top: 47%;       width: 16px; --rot:    1deg; opacity: .38; --dur: 12.6s; --delay: -3.4s; }
+  .pressed.p153 { left: 30px; top: 49%;      width: 20px; --rot:   26deg; opacity: .34; --dur: 12.9s; --delay: -4.4s; }
+  .pressed.p154 { left: 6px; top: 51%;       width: 16px; --rot:  -19deg; opacity: .30; --dur: 13.2s; --delay: -5.4s; }
+  .pressed.p155 { left: 30px; top: 53%;      width: 20px; --rot:    0deg; opacity: .26; --dur: 13.4s; --delay: -6.3s; }
+  .pressed.p156 { left: 22px; top: 55%;      width: 20px; --rot:  -31deg; opacity: .38; --dur: 13.7s; --delay: -7.3s; }
+  .pressed.p157 { left: 14px; top: 57%;      width: 28px; --rot:  -11deg; opacity: .38; --dur: 14.0s; --delay: -8.3s; }
+  .pressed.p158 { left: 0px; top: 59%;       width: 20px; --rot:    5deg; opacity: .38; --dur: 14.3s; --delay: -9.3s; }
+  .pressed.p159 { left: 22px; top: 61%;      width: 24px; --rot:  -26deg; opacity: .34; --dur: 14.6s; --delay: -10.2s; }
+  .pressed.p160 { left: 0px; top: 63%;       width: 16px; --rot:  -15deg; opacity: .34; --dur: 14.9s; --delay: -11.2s; }
+  .pressed.p161 { left: 30px; top: 65%;      width: 28px; --rot:   -1deg; opacity: .30; --dur: 15.2s; --delay: -0.2s; }
+  .pressed.p162 { left: 0px; top: 67%;       width: 24px; --rot:  -18deg; opacity: .30; --dur: 15.5s; --delay: -1.1s; }
+  .pressed.p163 { left: 30px; top: 69%;      width: 28px; --rot:   25deg; opacity: .34; --dur: 15.8s; --delay: -2.1s; }
+  .pressed.p164 { left: 0px; top: 71%;       width: 24px; --rot:   16deg; opacity: .26; --dur: 16.1s; --delay: -3.1s; }
+  .pressed.p165 { left: 6px; top: 73%;       width: 28px; --rot:   -6deg; opacity: .26; --dur: 16.3s; --delay: -4.0s; }
+  .pressed.p166 { left: 6px; top: 75%;       width: 28px; --rot:   22deg; opacity: .26; --dur: 8.6s; --delay: -5.0s; }
+  .pressed.p167 { left: 22px; top: 77%;      width: 24px; --rot:   29deg; opacity: .30; --dur: 8.9s; --delay: -6.0s; }
+  .pressed.p168 { left: 30px; top: 79%;      width: 24px; --rot:    1deg; opacity: .26; --dur: 9.2s; --delay: -7.0s; }
+  .pressed.p169 { left: 6px; top: 81%;       width: 16px; --rot:   31deg; opacity: .38; --dur: 9.5s; --delay: -7.9s; }
+  .pressed.p170 { left: 0px; top: 83%;       width: 28px; --rot:   20deg; opacity: .34; --dur: 9.8s; --delay: -8.9s; }
+  .pressed.p171 { left: 14px; top: 85%;      width: 28px; --rot:   12deg; opacity: .34; --dur: 10.1s; --delay: -9.9s; }
+  .pressed.p172 { left: 14px; top: 87%;      width: 24px; --rot:  -12deg; opacity: .38; --dur: 10.4s; --delay: -10.8s; }
+  .pressed.p173 { left: 0px; top: 89%;       width: 28px; --rot:   29deg; opacity: .34; --dur: 10.7s; --delay: -11.8s; }
+  .pressed.p174 { left: 30px; top: 91%;      width: 24px; --rot:  -21deg; opacity: .38; --dur: 11.0s; --delay: -0.8s; }
+  .pressed.p175 { left: 6px; top: 93%;       width: 24px; --rot:  -14deg; opacity: .34; --dur: 11.2s; --delay: -1.8s; }
+  .pressed.p176 { left: 0px; top: 95%;       width: 28px; --rot:  -17deg; opacity: .34; --dur: 11.5s; --delay: -2.7s; }
+  .pressed.p177 { left: 30px; top: 97%;      width: 28px; --rot:  -32deg; opacity: .26; --dur: 11.8s; --delay: -3.7s; }
+  .pressed.p178 { left: 14px; top: 99%;      width: 16px; --rot:   -1deg; opacity: .38; --dur: 12.1s; --delay: -4.7s; }
+  .pressed.p179 { right: 0px; top:  3%;      width: 28px; --rot:  -22deg; opacity: .30; --dur: 12.4s; --delay: -5.6s; }
+  .pressed.p180 { right: 6px; top:  5%;      width: 24px; --rot:  -14deg; opacity: .22; --dur: 12.7s; --delay: -6.6s; }
+  .pressed.p181 { right: 6px; top:  7%;      width: 28px; --rot:   14deg; opacity: .30; --dur: 13.0s; --delay: -7.6s; }
+  .pressed.p182 { right: 0px; top:  9%;      width: 20px; --rot:  -27deg; opacity: .22; --dur: 13.3s; --delay: -8.5s; }
+  .pressed.p183 { right: 6px; top: 11%;      width: 16px; --rot:  -15deg; opacity: .26; --dur: 13.6s; --delay: -9.5s; }
+  .pressed.p184 { right: 14px; top: 13%;     width: 28px; --rot:    5deg; opacity: .22; --dur: 13.9s; --delay: -10.5s; }
+  .pressed.p185 { right: 0px; top: 15%;      width: 16px; --rot:    9deg; opacity: .22; --dur: 14.1s; --delay: -11.4s; }
+  .pressed.p186 { right: 6px; top: 17%;      width: 24px; --rot:  -21deg; opacity: .26; --dur: 14.4s; --delay: -0.4s; }
+  .pressed.p187 { right: 6px; top: 19%;      width: 20px; --rot:   22deg; opacity: .30; --dur: 14.7s; --delay: -1.4s; }
+  .pressed.p188 { right: 6px; top: 21%;      width: 28px; --rot:   14deg; opacity: .26; --dur: 15.0s; --delay: -2.4s; }
+  .pressed.p189 { right: 14px; top: 23%;     width: 28px; --rot:  -16deg; opacity: .30; --dur: 15.3s; --delay: -3.3s; }
+  .pressed.p190 { right: 22px; top: 25%;     width: 24px; --rot:  -27deg; opacity: .34; --dur: 15.6s; --delay: -4.3s; }
+  .pressed.p191 { right: 22px; top: 27%;     width: 24px; --rot:   -6deg; opacity: .26; --dur: 15.9s; --delay: -5.3s; }
+  .pressed.p192 { right: 6px; top: 29%;      width: 24px; --rot:   20deg; opacity: .34; --dur: 16.2s; --delay: -6.2s; }
+  .pressed.p193 { right: 0px; top: 31%;      width: 16px; --rot:    8deg; opacity: .34; --dur: 16.5s; --delay: -7.2s; }
+  .pressed.p194 { right: 22px; top: 33%;     width: 20px; --rot:   21deg; opacity: .30; --dur: 8.8s; --delay: -8.2s; }
+  .pressed.p195 { right: 6px; top: 35%;      width: 24px; --rot:  -28deg; opacity: .30; --dur: 9.0s; --delay: -9.2s; }
+  .pressed.p196 { right: 22px; top: 37%;     width: 20px; --rot:   19deg; opacity: .30; --dur: 9.3s; --delay: -10.1s; }
+  .pressed.p197 { right: 22px; top: 39%;     width: 16px; --rot:   22deg; opacity: .26; --dur: 9.6s; --delay: -11.1s; }
+  .pressed.p198 { right: 22px; top: 41%;     width: 20px; --rot:   23deg; opacity: .22; --dur: 9.9s; --delay: -0.1s; }
+  .pressed.p199 { right: 22px; top: 43%;     width: 16px; --rot:   18deg; opacity: .34; --dur: 10.2s; --delay: -1.0s; }
+  .pressed.p200 { right: 14px; top: 45%;     width: 16px; --rot:  -28deg; opacity: .34; --dur: 10.5s; --delay: -2.0s; }
+  .pressed.p201 { right: 22px; top: 47%;     width: 24px; --rot:    2deg; opacity: .26; --dur: 10.8s; --delay: -3.0s; }
+  .pressed.p202 { right: 6px; top: 49%;      width: 16px; --rot:   27deg; opacity: .22; --dur: 11.1s; --delay: -3.9s; }
+  .pressed.p203 { right: 0px; top: 51%;      width: 28px; --rot:   28deg; opacity: .26; --dur: 11.4s; --delay: -4.9s; }
+  .pressed.p204 { right: 14px; top: 53%;     width: 16px; --rot:  -30deg; opacity: .26; --dur: 11.7s; --delay: -5.9s; }
+  .pressed.p205 { right: 6px; top: 55%;      width: 24px; --rot:    7deg; opacity: .30; --dur: 11.9s; --delay: -6.8s; }
+  .pressed.p206 { right: 14px; top: 57%;     width: 28px; --rot:   31deg; opacity: .30; --dur: 12.2s; --delay: -7.8s; }
+  .pressed.p207 { right: 14px; top: 59%;     width: 16px; --rot:   -4deg; opacity: .26; --dur: 12.5s; --delay: -8.8s; }
+  .pressed.p208 { right: 0px; top: 61%;      width: 20px; --rot:  -18deg; opacity: .30; --dur: 12.8s; --delay: -9.8s; }
+  .pressed.p209 { right: 14px; top: 63%;     width: 16px; --rot:  -22deg; opacity: .22; --dur: 13.1s; --delay: -10.7s; }
+  .pressed.p210 { right: 0px; top: 65%;      width: 28px; --rot:  -28deg; opacity: .30; --dur: 13.4s; --delay: -11.7s; }
+  .pressed.p211 { right: 14px; top: 67%;     width: 28px; --rot:  -32deg; opacity: .26; --dur: 13.7s; --delay: -0.7s; }
+  .pressed.p212 { right: 0px; top: 69%;      width: 20px; --rot:  -10deg; opacity: .26; --dur: 14.0s; --delay: -1.6s; }
+  .pressed.p213 { right: 22px; top: 71%;     width: 16px; --rot:  -14deg; opacity: .30; --dur: 14.3s; --delay: -2.6s; }
+  .pressed.p214 { right: 0px; top: 73%;      width: 28px; --rot:  -27deg; opacity: .34; --dur: 14.6s; --delay: -3.6s; }
+  .pressed.p215 { right: 0px; top: 75%;      width: 16px; --rot:  -15deg; opacity: .26; --dur: 14.8s; --delay: -4.5s; }
+  .pressed.p216 { right: 0px; top: 77%;      width: 24px; --rot:   21deg; opacity: .22; --dur: 15.1s; --delay: -5.5s; }
+  .pressed.p217 { right: 22px; top: 79%;     width: 16px; --rot:   26deg; opacity: .30; --dur: 15.4s; --delay: -6.5s; }
+  .pressed.p218 { right: 14px; top: 81%;     width: 16px; --rot:  -11deg; opacity: .26; --dur: 15.7s; --delay: -7.5s; }
+  .pressed.p219 { right: 14px; top: 83%;     width: 16px; --rot:  -14deg; opacity: .26; --dur: 16.0s; --delay: -8.4s; }
+  .pressed.p220 { right: 6px; top: 85%;      width: 16px; --rot:   22deg; opacity: .26; --dur: 16.3s; --delay: -9.4s; }
+  .pressed.p221 { right: 6px; top: 87%;      width: 20px; --rot:  -24deg; opacity: .30; --dur: 8.6s; --delay: -10.4s; }
+  .pressed.p222 { right: 0px; top: 89%;      width: 20px; --rot:  -18deg; opacity: .34; --dur: 8.9s; --delay: -11.3s; }
+  .pressed.p223 { right: 14px; top: 91%;     width: 16px; --rot:   -6deg; opacity: .34; --dur: 9.2s; --delay: -0.3s; }
+  .pressed.p224 { right: 14px; top: 93%;     width: 16px; --rot:   -1deg; opacity: .26; --dur: 9.5s; --delay: -1.3s; }
+  .pressed.p225 { right: 14px; top: 95%;     width: 28px; --rot:   26deg; opacity: .26; --dur: 9.8s; --delay: -2.2s; }
+  .pressed.p226 { right: 6px; top: 97%;      width: 20px; --rot:   10deg; opacity: .22; --dur: 10.0s; --delay: -3.2s; }
+  .pressed.p227 { right: 0px; top: 99%;      width: 20px; --rot:  -13deg; opacity: .22; --dur: 10.3s; --delay: -4.2s; }
+  .pressed.p228 { left: 65%; top:  4%;       width: 18px; --rot:   10deg; opacity: .10; --dur: 10.6s; --delay: -5.2s; }
+  .pressed.p229 { left: 32%; top:  7%;       width: 20px; --rot:   22deg; opacity: .10; --dur: 10.9s; --delay: -6.1s; }
+  .pressed.p230 { left: 40%; top: 10%;       width: 18px; --rot:   -8deg; opacity: .14; --dur: 11.2s; --delay: -7.1s; }
+  .pressed.p231 { left: 43%; top: 13%;       width: 20px; --rot:   15deg; opacity: .14; --dur: 11.5s; --delay: -8.1s; }
+  .pressed.p232 { left: 51%; top: 16%;       width: 18px; --rot:  -25deg; opacity: .12; --dur: 11.8s; --delay: -9.0s; }
+  .pressed.p233 { left: 60%; top: 19%;       width: 14px; --rot:   -5deg; opacity: .14; --dur: 12.1s; --delay: -10.0s; }
+  .pressed.p234 { left: 54%; top: 22%;       width: 20px; --rot:   11deg; opacity: .14; --dur: 12.4s; --delay: -11.0s; }
+  .pressed.p235 { left: 31%; top: 25%;       width: 16px; --rot:    6deg; opacity: .14; --dur: 12.6s; --delay: -11.9s; }
+  .pressed.p236 { left: 34%; top: 28%;       width: 14px; --rot:  -28deg; opacity: .12; --dur: 12.9s; --delay: -0.9s; }
+  .pressed.p237 { left: 39%; top: 31%;       width: 14px; --rot:   24deg; opacity: .14; --dur: 13.2s; --delay: -1.9s; }
+  .pressed.p238 { left: 51%; top: 34%;       width: 20px; --rot:   10deg; opacity: .14; --dur: 13.5s; --delay: -2.9s; }
+  .pressed.p239 { left: 39%; top: 37%;       width: 20px; --rot:  -11deg; opacity: .10; --dur: 13.8s; --delay: -3.8s; }
+  .pressed.p240 { left: 63%; top: 40%;       width: 18px; --rot:    3deg; opacity: .14; --dur: 14.1s; --delay: -4.8s; }
+  .pressed.p241 { left: 66%; top: 43%;       width: 20px; --rot:   13deg; opacity: .14; --dur: 14.4s; --delay: -5.8s; }
+  .pressed.p242 { left: 41%; top: 46%;       width: 18px; --rot:   -5deg; opacity: .14; --dur: 14.7s; --delay: -6.7s; }
+  .pressed.p243 { left: 51%; top: 49%;       width: 16px; --rot:   22deg; opacity: .10; --dur: 15.0s; --delay: -7.7s; }
+  .pressed.p244 { left: 51%; top: 52%;       width: 18px; --rot:    5deg; opacity: .10; --dur: 15.3s; --delay: -8.7s; }
+  .pressed.p245 { left: 61%; top: 55%;       width: 20px; --rot:   -8deg; opacity: .14; --dur: 15.5s; --delay: -9.7s; }
+  .pressed.p246 { left: 33%; top: 58%;       width: 20px; --rot:   12deg; opacity: .10; --dur: 15.8s; --delay: -10.6s; }
+  .pressed.p247 { left: 47%; top: 61%;       width: 16px; --rot:  -23deg; opacity: .10; --dur: 16.1s; --delay: -11.6s; }
+  .pressed.p248 { left: 44%; top: 64%;       width: 18px; --rot:   -3deg; opacity: .10; --dur: 16.4s; --delay: -0.6s; }
+  .pressed.p249 { left: 35%; top: 67%;       width: 18px; --rot:  -14deg; opacity: .10; --dur: 8.7s; --delay: -1.5s; }
+  .pressed.p250 { left: 43%; top: 70%;       width: 16px; --rot:    4deg; opacity: .10; --dur: 9.0s; --delay: -2.5s; }
+  .pressed.p251 { left: 61%; top: 73%;       width: 18px; --rot:   17deg; opacity: .14; --dur: 9.3s; --delay: -3.5s; }
+  .pressed.p252 { left: 56%; top: 76%;       width: 18px; --rot:   -7deg; opacity: .14; --dur: 9.6s; --delay: -4.4s; }
+  .pressed.p253 { left: 44%; top: 79%;       width: 20px; --rot:   24deg; opacity: .14; --dur: 9.9s; --delay: -5.4s; }
+  .pressed.p254 { left: 33%; top: 82%;       width: 20px; --rot:   27deg; opacity: .12; --dur: 10.2s; --delay: -6.4s; }
+  .pressed.p255 { left: 37%; top: 85%;       width: 14px; --rot:  -27deg; opacity: .10; --dur: 10.4s; --delay: -7.3s; }
+  .pressed.p256 { left: 37%; top: 88%;       width: 16px; --rot:  -23deg; opacity: .12; --dur: 10.7s; --delay: -8.3s; }
+  .pressed.p257 { left: 48%; top: 91%;       width: 16px; --rot:   -8deg; opacity: .10; --dur: 11.0s; --delay: -9.3s; }
+  .pressed.p258 { left: 36%; top: 94%;       width: 18px; --rot:   -9deg; opacity: .12; --dur: 11.3s; --delay: -10.3s; }
+  .pressed.p259 { left: 66%; top: 97%;       width: 20px; --rot:   28deg; opacity: .14; --dur: 11.6s; --delay: -11.2s; }
 
   .sheet > *:not(.pressed) { position: relative; z-index: 1; }
 
@@ -255,8 +476,17 @@
     transform-origin: 50% 90%;
     animation: sway var(--dur, 11s) ease-in-out var(--delay, 0s) infinite;
   }
-  /* no room for them once the paper fills the screen */
-  @media (max-width: 900px) { .side { display: none; } }
+  /* on narrow screens keep a thinned-out set, hugging the viewport edges */
+  @media (max-width: 900px) {
+    .side { display: none; }
+    .side.s1, .side.s3,  .side.s5,  .side.s7,  .side.s9,  .side.s11,
+    .side.s15, .side.s17, .side.s19, .side.s21, .side.s23, .side.s25 {
+      display: block;
+      width: 34px;
+    }
+    .side.s1, .side.s3, .side.s5, .side.s7, .side.s9, .side.s11 { left: 0; }
+    .side.s15, .side.s17, .side.s19, .side.s21, .side.s23, .side.s25 { right: 0; }
+  }
 
   .side.s1  { left:  2%; top:  3%; width: 54px; --rot:   14deg; opacity: .41; --dur: 9.5s; --delay: -1.3s; }
   .side.s2  { left:  7%; top: 11%; width: 38px; --rot:  -21deg; opacity: .48; --dur: 9.9s; --delay: -2.6s; }
@@ -539,8 +769,8 @@
 
   @media (max-width: 560px) {
     :root { --margin-x: 50px; --rule-x: 30px; }
-    body { padding: 0; font-size: 17px; }
-    .sheet { min-height: 100vh; border-radius: 0; box-shadow: none; }
+    body { padding: 16px 20px; font-size: 17px; }
+    .sheet { min-height: calc(100vh - 32px); border-radius: 14px; }
     h1 { font-size: 34px; }
     h2 { font-size: 24px; }
     .daisy { width: 128px; height: 128px; }
@@ -555,6 +785,15 @@
     .pressed.p15, .pressed.p18, .pressed.p20, .pressed.p23 { width: 22px; }
     .pressed.p17, .pressed.p19, .pressed.p22 { width: 30px; }
     .pressed.p16, .pressed.p21, .pressed.p24 { display: none; }
+    .pressed.p41, .pressed.p43, .pressed.p45, .pressed.p47, .pressed.p49,
+    .pressed.p51, .pressed.p53, .pressed.p55, .pressed.p57, .pressed.p59 { width: 20px; }
+    .pressed.p42, .pressed.p44, .pressed.p46, .pressed.p48, .pressed.p50,
+    .pressed.p52, .pressed.p54, .pressed.p56, .pressed.p58, .pressed.p60,
+    .pressed.p61, .pressed.p63, .pressed.p65 { display: none; }
+    .pressed.p68, .pressed.p70, .pressed.p72, .pressed.p74, .pressed.p76, .pressed.p78, .pressed.p80, .pressed.p82, .pressed.p84, .pressed.p86, .pressed.p88, .pressed.p90, .pressed.p92, .pressed.p94, .pressed.p96, .pressed.p98, .pressed.p100, .pressed.p102, .pressed.p104, .pressed.p106, .pressed.p108, .pressed.p110, .pressed.p112, .pressed.p114, .pressed.p116, .pressed.p118, .pressed.p120, .pressed.p122, .pressed.p124, .pressed.p126, .pressed.p128 { display: none; }
+    .pressed.p67, .pressed.p69, .pressed.p71, .pressed.p73, .pressed.p75, .pressed.p77, .pressed.p79, .pressed.p81, .pressed.p83, .pressed.p85, .pressed.p87, .pressed.p89, .pressed.p91, .pressed.p93, .pressed.p95, .pressed.p97, .pressed.p99, .pressed.p101, .pressed.p103, .pressed.p105, .pressed.p107, .pressed.p109, .pressed.p111, .pressed.p113, .pressed.p115, .pressed.p117, .pressed.p119, .pressed.p121, .pressed.p123, .pressed.p125, .pressed.p127 { width: 18px; }
+    .pressed.p130, .pressed.p131, .pressed.p133, .pressed.p134, .pressed.p136, .pressed.p137, .pressed.p139, .pressed.p140, .pressed.p142, .pressed.p143, .pressed.p145, .pressed.p146, .pressed.p148, .pressed.p149, .pressed.p151, .pressed.p152, .pressed.p154, .pressed.p155, .pressed.p157, .pressed.p158, .pressed.p160, .pressed.p161, .pressed.p163, .pressed.p164, .pressed.p166, .pressed.p167, .pressed.p169, .pressed.p170, .pressed.p172, .pressed.p173, .pressed.p175, .pressed.p176, .pressed.p178, .pressed.p179, .pressed.p181, .pressed.p182, .pressed.p184, .pressed.p185, .pressed.p187, .pressed.p188, .pressed.p190, .pressed.p191, .pressed.p193, .pressed.p194, .pressed.p196, .pressed.p197, .pressed.p199, .pressed.p200, .pressed.p202, .pressed.p203, .pressed.p205, .pressed.p206, .pressed.p208, .pressed.p209, .pressed.p211, .pressed.p212, .pressed.p214, .pressed.p215, .pressed.p217, .pressed.p218, .pressed.p220, .pressed.p221, .pressed.p223, .pressed.p224, .pressed.p226, .pressed.p227, .pressed.p229, .pressed.p230, .pressed.p232, .pressed.p233, .pressed.p235, .pressed.p236, .pressed.p238, .pressed.p239, .pressed.p241, .pressed.p242, .pressed.p244, .pressed.p245, .pressed.p247, .pressed.p248, .pressed.p250, .pressed.p251, .pressed.p253, .pressed.p254, .pressed.p256, .pressed.p257, .pressed.p259 { display: none; }
+    .pressed.p129, .pressed.p132, .pressed.p135, .pressed.p138, .pressed.p141, .pressed.p144, .pressed.p147, .pressed.p150, .pressed.p153, .pressed.p156, .pressed.p159, .pressed.p162, .pressed.p165, .pressed.p168, .pressed.p171, .pressed.p174, .pressed.p177, .pressed.p180, .pressed.p183, .pressed.p186, .pressed.p189, .pressed.p192, .pressed.p195, .pressed.p198, .pressed.p201, .pressed.p204, .pressed.p207, .pressed.p210, .pressed.p213, .pressed.p216, .pressed.p219, .pressed.p222, .pressed.p225, .pressed.p228, .pressed.p231, .pressed.p234, .pressed.p237, .pressed.p240, .pressed.p243, .pressed.p246, .pressed.p249, .pressed.p252, .pressed.p255, .pressed.p258 { width: 16px; }
     .pressed.p25, .pressed.p26, .pressed.p27, .pressed.p28, .pressed.p30, .pressed.p32, .pressed.p33, .pressed.p34, .pressed.p37, .pressed.p38, .pressed.p39 { display: none; }
     .pressed.p29, .pressed.p31, .pressed.p35, .pressed.p36, .pressed.p40 { width: 26px; }
   }
@@ -683,6 +922,225 @@
   <svg class="pressed p38" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
   <svg class="pressed p39" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
   <svg class="pressed p40" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p41" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p42" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p43" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p44" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p45" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p46" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p47" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p48" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p49" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p50" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p51" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p52" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p53" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p54" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p55" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p56" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p57" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p58" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p59" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p60" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p61" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p62" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p63" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p64" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p65" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p66" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p67" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p68" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p69" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p70" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p71" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p72" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p73" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p74" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p75" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p76" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p77" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p78" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p79" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p80" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p81" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p82" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p83" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p84" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p85" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p86" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p87" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p88" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p89" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p90" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p91" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p92" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p93" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p94" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p95" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p96" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p97" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p98" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p99" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p100" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p101" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p102" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p103" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p104" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p105" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p106" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p107" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p108" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p109" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p110" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p111" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p112" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p113" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p114" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p115" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p116" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p117" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p118" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p119" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p120" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p121" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p122" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p123" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p124" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p125" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p126" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p127" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p128" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p129" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p130" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p131" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p132" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p133" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p134" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p135" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p136" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p137" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p138" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p139" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p140" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p141" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p142" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p143" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p144" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p145" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p146" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p147" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p148" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p149" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p150" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p151" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p152" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p153" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p154" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p155" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p156" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p157" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p158" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p159" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p160" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p161" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p162" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p163" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p164" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p165" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p166" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p167" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p168" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p169" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p170" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p171" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p172" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p173" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p174" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p175" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p176" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p177" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p178" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p179" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p180" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p181" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p182" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p183" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p184" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p185" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p186" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p187" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p188" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p189" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p190" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p191" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p192" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p193" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p194" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p195" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p196" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p197" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p198" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p199" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p200" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p201" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p202" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p203" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p204" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p205" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p206" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p207" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p208" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p209" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p210" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p211" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p212" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p213" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p214" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p215" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p216" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p217" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p218" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p219" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p220" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p221" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p222" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p223" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p224" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p225" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p226" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p227" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p228" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p229" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p230" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p231" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p232" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p233" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p234" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p235" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p236" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p237" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p238" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p239" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p240" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p241" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p242" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p243" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p244" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p245" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p246" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p247" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p248" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p249" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p250" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p251" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p252" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p253" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p254" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p255" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
+  <svg class="pressed p256" viewBox="0 0 100 100" aria-hidden="true"><use href="#bloom"/></svg>
+  <svg class="pressed p257" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"/></svg>
+  <svg class="pressed p258" viewBox="0 0 100 100" aria-hidden="true"><use href="#sprig"/></svg>
+  <svg class="pressed p259" viewBox="0 0 100 100" aria-hidden="true"><use href="#bud"/></svg>
 
   <p class="eyebrow">for my baby</p>
 
@@ -845,7 +1303,7 @@
   }
 
   var petals = [];
-  var N = innerWidth < 560 ? 26 : 62;
+  var N = innerWidth < 560 ? 34 : 90;
   for (var i = 0; i < N; i++) petals.push(make(true));
 
   function frame() {
